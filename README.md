@@ -76,9 +76,9 @@ curl http://<External IP> -D -
 - Shift some module variables to a higher level.
 - Design an arbitrary amount of EKS node groups.
 - Design dual-stack EKS.
+- Consider designing EKS to be private-facing, with access through a Bastion host.
 
 ### EKS
-- Consider designing EKS to be private-facing, with access through a Bastion host.
 - ALB Ingress / Nginx ingress.
 - ExternalDNS.
 - Metric server.
@@ -86,6 +86,6 @@ curl http://<External IP> -D -
 - EBS CSI driver.
 - Fluentbit / OpenSearch.
 - VictoriaMetrics / Prometheus.
-- Istio **if required**;
-- Let'sEncrypt CertBot manager **if required**.
-- Velero (STS backups) **if required**.
+- Istio *if required*;
+- Let's Encrypt CertBot manager *if required*.
+- Velero (STS backups) *if required*.
