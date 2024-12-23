@@ -1,5 +1,16 @@
 # AWS EKS
 
+## Summary
+This repository is designed to:
+- provision a VPC (default region: us-east-1) with three availability zones.
+- set up an EKS cluster (k8s v1.31) including a default node group with one "t3.large" instance.
+- deploy an autoscaler (https://github.com/kubernetes/autoscaler/releases).
+- deploy a publicly accessible Nginx service with an HPA (Horizontal Pod Autoscaler) policy.
+
+To test autoscaling, you can modify the replica count by editing the deployment configuration available at https://github.com/iomatters/aws-vpc-eks/blob/main/kustomize/nginx/base/deployment.yaml#L7.
+
+Triggering the HPA is not straightforward; you would need to generate sufficient traffic to push Nginx's CPU utilization above 60%.
+
 ## Setup
  1. Create an AWS account.
  2. Navigate to the AWS Console and create an IAM user.
